@@ -15,3 +15,45 @@
  */
 
  @import "bootstrap";
+
+ /* =====================
+      homes / index
+===================== */
+
+#homes-index {
+
+    nav.navbar.navbar-expand-lg.navbar-light {
+        background-color: #fef6e4;
+    }
+
+    .nav-link {
+        color: #00214d;
+    }
+
+	.nav-item {
+		display: inline-block;
+	    padding: 0.5em 1em;
+	    text-decoration: none;
+	    background: #00ebc7;
+	    color: #00214d;
+	    border-radius: 4px;
+	    box-shadow: 0px 0px 0px 5px #00ebc7;
+	    border: dashed 2px #00214d;
+	    margin-right: 18px;
+	    font-weight: bold;
+	}
+
+	.nav-item:hover {
+	    border: dotted 3px #00214d;
+	}
+}
+
+
+
+ /* =====================
+    header / buttons
+===================== */
+
+
+
+
