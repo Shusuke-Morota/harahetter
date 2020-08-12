@@ -1,3 +1,37 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* =====================
+     users / index
+===================== */
+
+
+#users-index {
+
+    .card {
+       border: solid 2px #00214d;
+    }
+
+    img.attachment.user.profile_image.img-fluid.fallback {
+       border: solid 2px #00214d;
+       border-radius: 5px;
+    }
+
+	.index-user-name {
+	   border-bottom: dashed 2px #00214d;
+	   font-size: 20px;
+	   font-weight: bold;
+	   text-align: center;
+	}
+
+	.index-user-name a {
+	   color: #00214d;
+	   text-decoration: none;
+	}
+
+	.index-user-name a:hover {
+	   text-decoration: none;
+	}
+}
