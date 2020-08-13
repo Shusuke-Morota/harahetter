@@ -21,10 +21,12 @@
      header / design
 ===================== */
 
-#homes-index, #users-index {
+#homes-index, #users-index, #users-show {
+
+    background-color: #fef6e4;                /*  サイト全体の背景色 */
 
     nav.navbar.navbar-expand-lg.navbar-light {
-        background-color: #fef6e4;
+        background-color: #f3d2c1;
     }
 
     .nav-link {
@@ -44,8 +46,8 @@
 	    font-weight: bold;
 	}
 
-	.nav-item:hover {
-	    border: dotted 3px #00214d;
+	.nav-item:active {
+	    border: solid 3px #00214d;
 	}
 }
 
