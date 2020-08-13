@@ -63,4 +63,57 @@
 	   font-weight: bold;
 	   text-align: center;
 	}
+
+	.card-content {
+	   text-align: center;
+	   border-bottom: dashed 2px #00214d;
+	}
+
+	div.show-btn {
+	   text-align: center;
+	}
 }
+
+ /* =====================
+      users / edit
+===================== */
+
+#users-edit {
+	h2 {
+	  color: #00214d;
+	  font-weight: bold;
+	  text-align: center;
+	  margin-bottom: 30px;
+	}
+
+	label {
+	  color: #00214d;
+	  font-weight: bold;
+	}
+
+	div.form-group {
+	  margin-bottom: 20px;
+	}
+
+	input#user_profile_image.form-control {
+	  border: solid 2px #00214d;
+	}
+
+	input#user_name.form-control {
+	  border: solid 2px #00214d;
+	}
+
+	input#user_email.form-control {
+	  border: solid 2px #00214d;
+	}
+
+	textarea#user_profile.form-control {
+	  border: solid 2px #00214d;
+	}
+}
+
+
+
+
+
+
