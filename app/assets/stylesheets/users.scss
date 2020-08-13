@@ -10,6 +10,11 @@
 
 #users-index {
 
+    .index-users-title {
+       font-weight: bold;
+       text-align: center;
+    }
+
     .card {
        border: solid 2px #00214d;
     }
@@ -33,5 +38,29 @@
 
 	.index-user-name a:hover {
 	   text-decoration: none;
+	}
+}
+
+
+/* =====================
+      users / show
+===================== */
+
+#users-show {
+
+    .card {
+       border: solid 2px #00214d;
+    }
+
+    img.attachment.user.profile_image.img-fluid.fallback {
+       border: solid 2px #00214d;
+       border-radius: 5px;
+    }
+
+	h5.card-title {
+	   border-bottom: dashed 2px #00214d;
+	   color: #00214d;
+	   font-weight: bold;
+	   text-align: center;
 	}
 }
