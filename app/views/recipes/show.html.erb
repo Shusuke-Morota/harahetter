@@ -1,2 +1,39 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+
+
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">
+						<%= @recipe.title %>
+					</h5>
+
+					<p class="card-text">
+						<%= simple_format @recipe.body %>
+					</p>
+
+					<% unless @recipe.user == current_user %>
+					<p class="recipe-contributor">
+						<%= link_to "このレシピ投稿者を見る", user_path(@recipe.user.id) %>
+					</p>
+					<% end %>
+
+					<p class="card-text">
+						<small class="text-muted">
+							投稿日：<%= @recipe.created_at.strftime("%Y-%m-%d") %>
+						</small>
+					</p>
+
+					<% if @recipe.user == current_user %>
+					<!-- 記事を投稿した人とログインしている人が同じならば編集と削除を表示させる -->
+					<div class="recipe-button" style="text-align: right;">
+						<%= link_to "編集", edit_recipe_path(@recipe), class: "btn btn-success" %>
+						<%= link_to "削除", recipe_path(@recipe), method: :delete, class: "btn btn-danger", data: {confirm: "本当に削除しますか？"} %>
+					</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
