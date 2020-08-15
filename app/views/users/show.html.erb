@@ -2,8 +2,11 @@
 
 <div class="row">
 	<div class="col-12">
-		<div class="users-show-bg-image">
-			<%= attachment_image_tag @user, :profile_bg_image, :fill, 1500, 300, fallback: "users-show-bg-image.jpg", class:"img-fluid" %>
+		<div class="users-show-title">
+			<div class="users-show-bg-image">
+				<%= attachment_image_tag @user, :profile_bg_image, :fill, 1500, 300, fallback: "users-show-bg-image.jpg", class:"img-fluid" %>
+			</div>
+			<h1><%= @user.name %>のマイページ  </h1>
 		</div>
 	</div>
 </div>
@@ -22,11 +25,11 @@
 						</h5>
 
 						<% if @user.id == current_user.id %>
-						  <p class="card-content">
-						  	<small class="text-muted">
-						  		<%= @user.email %>
-						  	</small>
-						  </p>
+						<p class="card-content">
+							<small class="text-muted">
+								<%= @user.email %>
+							</small>
+						</p>
 						<% end %>
 
 						<p class="card-content-1">
@@ -35,7 +38,7 @@
 
 						<div class="show-btn">
 							<% if @user.id == current_user.id %>
-							  <%=  link_to "ユーザー情報を編集する", edit_user_path, class: "btn btn-primary" %>
+							<%=  link_to "ユーザー情報を編集する", edit_user_path, class: "btn btn-primary" %>
 							<% end %>
 						</div>
 					</div>
