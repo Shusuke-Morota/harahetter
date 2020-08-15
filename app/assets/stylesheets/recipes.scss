@@ -42,3 +42,19 @@
 		margin-bottom: 30px;
 	}
 }
+
+/* =====================
+    recipes / show
+===================== */
+
+#recipes-show {
+
+	div.card-body {
+	    border: solid 3px #00214d;
+	    border-radius: 3px;
+	}
+
+	.card-text {
+	    border-bottom: dashed 3px #00214d;
+	}
+}
