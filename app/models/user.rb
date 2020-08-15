@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   attachment :profile_image
   attachment :profile_bg_image
+
+  has_many :recipes, dependent: :destroy
 end
