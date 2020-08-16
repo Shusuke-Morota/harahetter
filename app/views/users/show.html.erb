@@ -45,5 +45,30 @@
 				</div>
 			</div>
 		</div>
+		<div class="col-9 mx-auto">
+			<table class="table table-hover">
+				<thead class="index-title">
+					<tr>
+						<th scope="col">【 メニュー名 】</th>
+						<th scope="col">【 写真 】</th>
+					</tr>
+				</thead>
+				<tbody class="index-body">
+					<% @user.recipes.each do |recipe| %>
+					<tr>
+						<td class="recipe-title">
+							<%= link_to truncate(recipe.title, length: 12), recipe_path(recipe) %>
+						</td>
+
+						<td>
+							<%= link_to recipe_path(recipe) do %>
+							<%= attachment_image_tag recipe.recipe_images.first, :image, :fill, 100, 100, format: 'jpeg' %>
+							<% end %>
+						</td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </div>
