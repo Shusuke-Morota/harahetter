@@ -3,3 +3,42 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+#homes-index {
+
+	img.top-meal-bg {
+	    width: 100%;
+	    opacity: 0.7;
+	}
+
+	.relative {
+	    position: relative;
+	}
+
+	h2.top-bg-copy {
+		position: absolute;
+		top: 5%;
+		left: 0%;
+		font-weight: bold;
+		color: white;
+		text-align: center;
+	}
+
+	h2.top-bg-copy-2 {
+	    position: absolute;
+	    top: 15%;
+	    left: 17%;
+	    font-weight: bold;
+	    color: white;
+	}
+
+    p.top-bg-copy-3 {
+	    position: absolute;
+	    top: 20%;
+	    left: 27%;
+	    font-weight: bold;
+	    color: white;
+	    font-size: 20px;
+    }
+}
+
+
