@@ -1,2 +1,36 @@
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+
+
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-8 mx-auto">
+			<h2 class="recipes-index-title">プラン一覧</h2>
+			<table class="table table-hover">
+				<thead class="index-title">
+					<tr>
+						<th scope="col">メニュー名</th>
+						<th scope="col">写真</th>
+						<th scope="col">投稿者</th>
+					</tr>
+				</thead>
+				<tbody class="index-body">
+					<% @recipes.each do |recipe| %>
+					<tr>
+						<td class="recipe-title">
+							<%= link_to truncate(recipe.title, length: 12), recipe_path(recipe) %>
+						</td>
+
+						<td>
+							<%= attachment_image_tag recipe.recipe_images.first, :image, :fill, 100, 100, format: 'jpeg' %>
+						</td>
+
+						<td class="recipe-username">
+							<%= link_to recipe.user.name, user_path(recipe.user_id) %>
+						</td>
+
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
