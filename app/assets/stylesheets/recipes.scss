@@ -147,11 +147,20 @@
         }
 
         td.recipe-title {
+            color: #00214d;
             line-height: 100px;
+        }
+
+        td.recipe-title a {
+            color: #00214d;
         }
 
         td.recipe-username {
             line-height: 100px;
+        }
+
+        td.recipe-username a {
+            color: #00214d;
         }
 
         img.attachment.recipe_image.image {
