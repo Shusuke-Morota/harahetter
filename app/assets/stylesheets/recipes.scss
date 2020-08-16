@@ -24,16 +24,20 @@
         margin-bottom: 30px;
     }
 
-    input#title.form-control {
-        border: solid 2px #00214d;
+    input#recipe_recipe_images_images.form-control {
+        border: solid 3px #00214d;
     }
 
-    textarea#body.form-control {
-        border: solid 2px #00214d;
+    input#recipe_title.form-control {
+        border: solid 3px #00214d;
+    }
+
+    textarea#recipe_body.form-control {
+        border: solid 3px #00214d;
     }
 
     input.btn.btn-success.btn-block {
-		border: solid 2px #00214d;
+		border: solid 3px #00214d;
 		border-radius: 50px;
 		background-color: #00ebc7;
 		color: #00214d;
@@ -57,6 +61,12 @@
 	.card-text {
 	    border-bottom: dashed 3px #00214d;
 	}
+
+	img.attachment.recipe_image.image.img-fluid.mx-auto {
+	    border: solid 3px #00214d;
+	    border-radius: 3px;
+	    margin-bottom: 20px;
+	}
 }
 
 
@@ -67,9 +77,75 @@
 #recipes-edit {
 
     h2.recipes-edit-title {
+        color: #00214d;
         font-weight: bold;
         text-align: center;
     }
+
+    label {
+        color: #00214d;
+        font-weight: bold;
+    }
+
+    input#title.form-control {
+        border: solid 3px #00214d;
+    }
+
+    textarea#body.form-control {
+        border: solid 3px #00214d;
+    }
+
+    div.form-group {
+        margin-bottom: 30px;
+    }
+
+    input.btn.btn-success.btn-block {
+		border: solid 3px #00214d;
+		border-radius: 50px;
+		background-color: #00ebc7;
+		color: #00214d;
+		font-weight: bold;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+}
+
+/* =====================
+    recipes / index
+===================== */
+
+#recipes-index {
+
+        h2.recipes-index-title {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .index-body {
+            font-weight: bold;
+        }
+
+        .index-body a {
+            color: #00214d;
+            text-decoration: none;
+        }
+
+        .index-body a:hover {
+            text-decoration: underline;
+        }
+
+        tr {
+            text-align: center;
+        }
+
+        td.recipe-title {
+            line-height: 96px;
+        }
+
+        td.recipe-username {
+            line-height: 96px;
+        }
 }
 
 

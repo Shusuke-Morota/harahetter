@@ -12,6 +12,14 @@
 						<%= @recipe.title %>
 					</h5>
 
+					<div class="card-image">
+						<% if @recipe.recipe_images.present? %>
+						<% @recipe.recipe_images.each do |recipe_image| %>
+						<%= attachment_image_tag recipe_image, :image, :fill, 600, 550, format: 'jpeg', class:"img-fluid mx-auto"  %>
+						<% end %>
+						<% end %>
+					</div>
+
 					<p class="card-text">
 						<%= simple_format @recipe.body %>
 					</p>
