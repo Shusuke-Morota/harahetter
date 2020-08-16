@@ -23,7 +23,7 @@
 							<div class="media-content">
 								<div class="index-user-name">
 									【 <%= link_to user.name, user_path(user) %> 】
-									<small>投稿数：</small>
+									<small>投稿数：<%= user.recipes.count %> 件</small>
 								</div>
 							</div>
 						</div>

@@ -17,19 +17,19 @@
 
 	input#user_name.form-control {
 	    margin-bottom: 20px;
-	    border: solid 1px #00214d;
+	    border: solid 3px #00214d;
 	    border-radius: 50px;
 	}
 
 	input#user_email.form-control {
 	    margin-bottom: 20px;
-	    border: solid 1px #00214d;
+	    border: solid 3px #00214d;
 	    border-radius: 50px;
 	}
 
 	input#user_password.form-control {
 	    margin-bottom: 20px;
-	    border: solid 1px #00214d;
+	    border: solid 3px #00214d;
 	    border-radius: 50px;
 	}
 
@@ -40,14 +40,14 @@
 
 	input#user_password_confirmation.form-control {
 	    margin-bottom: 45px;
-	    border: solid 1px #00214d;
+	    border: solid 3px #00214d;
 	    border-radius: 50px;
 
 	}
 
 	input.btn.btn-primary.btn-block {
         background: #00ebc7;
-	    border: solid 2px #00214d;
+	    border: solid 3px #00214d;
 	    border-radius: 50px;
 	    color: #00214d;
 	    font-weight: bold;
@@ -82,8 +82,9 @@
 
 a.btn.btn-primary {
 	    background: #fde24f;
-	    border: solid 2px #00214d;
+	    border: solid 3px #00214d;
 	    border-radius: 50px;
 	    color: #00214d;
 	    font-weight: bold;
+	    margin-bottom: 10px;
 	}

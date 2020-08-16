@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
   def index
   	@recipes = Recipe.all
   end
@@ -27,6 +28,12 @@ class RecipesController < ApplicationController
   def new
   	@recipe = Recipe.new
     @recipe.recipe_images.build
+  end
+
+  def destroy
+    recipe = Recipe.find(params[:id])
+    recipe.destroy
+    redirect_to recipes_path
   end
 
 

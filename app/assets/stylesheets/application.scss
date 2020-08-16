@@ -21,7 +21,7 @@
     header / design
 ===================== */
 
-#homes-index, #users-index, #users-show, #users-edit, #recipes-new, #recipes-index, #recipes-show, #recipes-edit {
+#homes-index, #users-index, #users-show, #users-edit, #recipes-new, #recipes-index, #recipes-show, #recipes-edit, #sessions-new, #registrations-new {
 
     background-color: #fef6e4;                /*  サイト全体の背景色 */
 
@@ -51,6 +51,10 @@
 	}
 
 	div.alert.alert-primary {
+	    text-align: center;
+	}
+
+	div.alert.alert-danger {
 	    text-align: center;
 	}
 

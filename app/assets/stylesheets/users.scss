@@ -28,7 +28,7 @@
 
 	.index-user-name {
 	   border-bottom: dashed 2px #00214d;
-	   font-size: 20px;
+	   font-size: 18px;
 	   font-weight: bold;
 	   text-align: center;
 	}
@@ -148,6 +148,15 @@
 
      td.recipe-title {
        line-height: 100px;
+     }
+
+     td.recipe-title a {
+       color: #00214d;
+       text-decoration: none;
+     }
+
+     td.recipe-title a:hover {
+       text-decoration: underline;
      }
 
      td.recipe-username {
