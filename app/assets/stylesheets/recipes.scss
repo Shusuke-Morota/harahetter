@@ -80,6 +80,7 @@
         color: #00214d;
         font-weight: bold;
         text-align: center;
+        margin-bottom: 30px;
     }
 
     label {
@@ -87,11 +88,15 @@
         font-weight: bold;
     }
 
-    input#title.form-control {
+    input#recipe_recipe_images_images.form-control {
         border: solid 3px #00214d;
     }
 
-    textarea#body.form-control {
+    input#recipe_title.form-control {
+        border: solid 3px #00214d;
+    }
+
+    textarea#recipe_body.form-control {
         border: solid 3px #00214d;
     }
 
@@ -137,14 +142,20 @@
 
         tr {
             text-align: center;
+            border-top: solid 2px #00214d;
+            border-bottom: solid 2px #00214d;
         }
 
         td.recipe-title {
-            line-height: 96px;
+            line-height: 100px;
         }
 
         td.recipe-username {
-            line-height: 96px;
+            line-height: 100px;
+        }
+
+        img.attachment.recipe_image.image {
+            border: solid 3px #00214d;
         }
 }
 
