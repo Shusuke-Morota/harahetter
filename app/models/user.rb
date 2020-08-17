@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :recipes, dependent: :destroy
   has_many :recipe_images, dependent: :destroy
   accepts_attachments_for :recipe_images, attachment: :image
+  has_many :reviews, dependent: :destroy
 
   validates :name, presence: true
 end
