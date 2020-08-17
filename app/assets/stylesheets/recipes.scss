@@ -67,6 +67,42 @@
 	    border-radius: 3px;
 	    margin-bottom: 20px;
 	}
+
+    a.btn.btn-success {
+        border: solid 3px #00214d;
+        border-radius: 50px;
+        background-color: #fde24f;
+        color: #00214d;
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        transition: .3s;
+    }
+
+    a.btn.btn-success:hover {
+        transform: translateY(-4px);
+    }
+
+    a.btn.btn-danger {
+        border: solid 3px #00214d;
+        border-radius: 50px;
+        background-color: #fa5246;
+        color: #00214d;
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        transition: .3s;
+    }
+
+    a.btn.btn-danger:hover {
+        transform: translateY(-4px);
+    }
+
+    h2.recipes-show-review-title {
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 30px;
+    }
 }
 
 

@@ -26,7 +26,7 @@
 
 					<% unless @recipe.user == current_user %>
 					<p class="recipe-contributor">
-						<%= link_to "このレシピ投稿者を見る", user_path(@recipe.user.id) %>
+						<%= link_to "このレシピの投稿者を見る", user_path(@recipe.user.id), class: "btn btn-success" %>
 					</p>
 					<% end %>
 
@@ -44,6 +44,15 @@
 					</div>
 					<% end %>
 				</div>
+			</div>
+		</div>
+
+		<div class="col-6">
+			<h2 class="recipes-show-review-title">
+				レビュー一覧
+			</h2>
+			<div class="review-catalog">
+				<%= render "reviews/form", review: @review, recipe: @recipe %>
 			</div>
 		</div>
 	</div>
