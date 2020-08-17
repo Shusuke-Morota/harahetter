@@ -169,6 +169,50 @@
         }
 }
 
+/* =====================
+    recipes / create
+===================== */
+
+#recipes-create {
+
+        h2.recipes-new-title {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        label {
+            color: #00214d;
+            font-weight: bold;
+        }
+
+        div.form-group {
+            margin-bottom: 30px;
+        }
+
+        input#recipe_recipe_images_images.form-control {
+            border: solid 3px #00214d;
+        }
+
+        input#recipe_title.form-control {
+            border: solid 3px #00214d;
+        }
+
+        textarea#recipe_body.form-control {
+            border: solid 3px #00214d;
+        }
+
+        input.btn.btn-success.btn-block {
+            border: solid 3px #00214d;
+            border-radius: 50px;
+            background-color: #00ebc7;
+            color: #00214d;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+}
+
 
 
 
