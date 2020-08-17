@@ -1,9 +1,20 @@
+<% if @user.errors.any? %>
+  <div class="notification is-danger">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 
 <div class="container mt-5">
 	<div class="row">
 		<div class="col-6 mx-auto">
 			<h2 class="edit-users-title">ユーザー編集</h2>
-			<%= form_with model: @user do |form| %>
+			<%= form_with model: @user, local: true do |form| %>
 
 			<div class="form-group">
 				<%= form.label :プロフィール背景画像 %>
