@@ -220,6 +220,14 @@
             border: solid 3px #00214d;
             border-radius: 3px;
         }
+
+        td.recipes-index-favorites {
+            line-height: 100px;
+        }
+
+        td.recipes-index-favorites a {
+            color: #ff5470;
+        }
 }
 
 /* =====================
