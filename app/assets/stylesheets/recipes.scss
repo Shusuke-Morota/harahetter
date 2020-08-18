@@ -103,6 +103,23 @@
         text-align: center;
         margin-bottom: 30px;
     }
+
+    div.rating-box .rating .fa {
+        font-size: 30px;
+        color: #ffcc00;
+        cursor: pointer;
+    }
+
+    div.main-rating {
+        display: flex;
+        font-size: 30px;
+        color: #ffcc00;
+        cursor: pointer;
+    }
+
+    .rating-value {
+        font-size: 20px;
+    }
 }
 
 
