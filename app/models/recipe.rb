@@ -3,6 +3,7 @@ class Recipe < ApplicationRecord
 	has_many :recipe_images, dependent: :destroy
 	accepts_attachments_for :recipe_images, attachment: :image
 	has_many :reviews, dependent: :destroy
+	has_many :favorites, dependent: :destroy
 
 	with_options presence: true do
 		validates :title

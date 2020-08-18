@@ -6,11 +6,15 @@ class User < ApplicationRecord
 
   attachment :profile_image
   attachment :profile_bg_image
+  validates :name, presence: true
 
   has_many :recipes, dependent: :destroy
   has_many :recipe_images, dependent: :destroy
   accepts_attachments_for :recipe_images, attachment: :image
   has_many :reviews, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 
-  validates :name, presence: true
+  def already_favorited?(recipe)
+    self.favorites.exists?(recipe_id: recipe.id)
+  end
 end

@@ -9,6 +9,7 @@
 					<tr>
 						<th scope="col">メニュー名</th>
 						<th scope="col">写真</th>
+						<th scope="col"></th>
 						<th scope="col">投稿者</th>
 					</tr>
 				</thead>
@@ -23,6 +24,15 @@
 							<%= link_to recipe_path(recipe) do %>
 							<%= attachment_image_tag recipe.recipe_images.first, :image, :fill, 100, 100, format: 'jpeg' %>
 							<% end %>
+						</td>
+
+						<td>
+							<% if current_user.already_favorited?(recipe) %>
+							  <%= link_to "いいねを外す", recipe_favorites_path(recipe), method: :dellete %>
+							<% else %>
+							  <%= link_to "いいねをする", recipe_favorites_path(recipe), method: :post %>
+							<% end %>
+							<%= recipe.favorites.count %>
 						</td>
 
 						<td class="recipe-username">
