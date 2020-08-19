@@ -7,6 +7,8 @@ class RecipesController < ApplicationController
   def show
   	@recipe = Recipe.find(params[:id])
     @review = Review.new
+    @comment = Comment.new
+    @comments = @recipe.comments.order(created_at: :desc)
   end
 
   def edit
