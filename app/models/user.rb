@@ -17,4 +17,6 @@ class User < ApplicationRecord
   def already_favorited?(recipe)
     self.favorites.exists?(recipe_id: recipe.id)
   end
+
+  has_many :comments, dependent: :destroy
 end
