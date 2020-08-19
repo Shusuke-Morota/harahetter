@@ -50,8 +50,8 @@
 				<thead class="index-title">
 					<tr>
 						<th scope="col">【 メニュー名 】</th>
-						<th scope="col">【 いいね数 】</th>
 						<th scope="col">【 写真 】</th>
+						<th scope="col">【 いいね数 】</th>
 					</tr>
 				</thead>
 				<tbody class="index-body">
@@ -61,14 +61,14 @@
 							<%= link_to truncate(recipe.title, length: 12), recipe_path(recipe) %>
 						</td>
 
-						<td class="users-show-favorites">
-							<%= recipe.favorites.count %>
-						</td>
-
 						<td>
 							<%= link_to recipe_path(recipe) do %>
 							<%= attachment_image_tag recipe.recipe_images.first, :image, :fill, 100, 100, format: 'jpeg' %>
 							<% end %>
+						</td>
+
+						<td class="users-show-favorites">
+							<%= recipe.favorites.count %>
 						</td>
 					</tr>
 					<% end %>
