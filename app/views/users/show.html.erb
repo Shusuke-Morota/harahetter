@@ -50,6 +50,7 @@
 				<thead class="index-title">
 					<tr>
 						<th scope="col">【 メニュー名 】</th>
+						<th scope="col">【 いいね数 】</th>
 						<th scope="col">【 写真 】</th>
 					</tr>
 				</thead>
@@ -58,6 +59,10 @@
 					<tr>
 						<td class="recipe-title">
 							<%= link_to truncate(recipe.title, length: 12), recipe_path(recipe) %>
+						</td>
+
+						<td class="users-show-favorites">
+							<%= recipe.favorites.count %>
 						</td>
 
 						<td>
