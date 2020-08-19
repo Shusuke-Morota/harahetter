@@ -6,10 +6,10 @@
     <li class="comment-container">
         <div class="comment-box">
             <div class="comment-avatar">
-                <%= attachment_image_tag comment.user, :profile_image, fallback: "no_image.jpg", class:"comment-image", size: "40x40" %>
+                <%= attachment_image_tag comment.user, :profile_image, fallback: "no-image.png", class:"comment-image", size: "40x40" %>
             </div>
             <div class="comment-text">
-                <p><%= link_to "@#{comment.user.name}", users_user_path(comment.user.id) %></p>
+                <p><%= link_to "@#{comment.user.name}", users_path(comment.user.id) %></p>
                 <div class="comment-entry">
                     <%= comment.content %>
                     <% if comment.user == current_user %>
@@ -33,7 +33,7 @@
                 <li class="comment-container">
                     <div class="comment-box">
                         <div class="comment-avatar">
-                            <%= attachment_image_tag comment.user, :profile_image, fallback: "no_image.jpg", class:"comment-image", size: "40x40" %>
+                            <%= attachment_image_tag comment.user, :profile_image, fallback: "no-image.png", class:"comment-image", size: "40x40" %>
                         </div>
                         <div class="comment-text">
                             <p><%= link_to "@#{comment.user.name}", users_user_path(comment.user.id) %></p>
