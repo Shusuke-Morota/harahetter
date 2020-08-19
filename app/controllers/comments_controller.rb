@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 	def create
-      @recipe = Item.find(params[:item_id])
+      @recipe = Recipe.find(params[:recipe_id])
       #投稿に紐づいたコメントを作成
       @comment = @recipe.comments.build(comment_params)
       @comment.user_id = current_user.id
