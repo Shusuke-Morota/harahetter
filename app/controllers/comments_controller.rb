@@ -11,7 +11,6 @@ class CommentsController < ApplicationController
 	end
 
 	def destroy
-		# @article = Article.find(params[:article_id])
 		@comment = Comment.find(params[:recipe_id])
 		if @comment.destroy
 			redirect_to recipe_path(@comment.recipe)

@@ -54,7 +54,7 @@
 				<%= form_for ([@recipe,@comment]) do |f| %>
 
 				<div class="form-group">
-					<%= f.text_area :content, class: "form-control", placeholder: "コメントしてみよう" %>
+					<%= f.text_area :content, size: "20x7", class: "form-control", placeholder: "コメントしてみよう" %>
 				</div>
 
 				<div class="comment-button">
@@ -71,7 +71,9 @@
 				<div class="card-body">
 					<div class="comment-user-profile-image">
 						<%= attachment_image_tag comment.user, :profile_image, :fill, 50, 50, fallback: "no-image.png", size: "50x50", class:"img-fluid" %>
-						<%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %>
+
+						<%= link_to "#{comment.user.name}さん", user_path(comment.user.id), class: "comments-user-name" %>
+
 						<time datetime="<%= comment.created_at %>" style="font-size: 13px;  margin-left: 222px">
 							コメント投稿日：<%= comment.created_at.strftime("%Y-%m-%d") %>
 						</time>

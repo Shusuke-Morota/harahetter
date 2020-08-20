@@ -53,6 +53,10 @@
 
 #recipes-show {
 
+    div.card {
+        margin-bottom: 25px;
+    }
+
 	div.card-body {
 	    border: solid 3px #00214d;
 	    border-radius: 3px;
@@ -144,10 +148,25 @@
     h2.recipes-show-comments-catalog {
         font-weight: bold;
         text-align: center;
+        margin-bottom: 20px;
     }
 
-    h5.card-header {
-        border: solid 3px #00214d;
+    img.attachment.user.profile_image.img-fluid {
+        border-radius: 50px;
+    }
+
+    a.comments-user-name {
+        text-decoration: none;
+        color: #00214d;
+        font-weight: bold;
+    }
+
+    a.comments-user-name:hover {
+        text-decoration: underline;
+    }
+
+    span.fa.fa-trash.trash-btn::before {
+        color: #ff5470;
     }
 }
 
