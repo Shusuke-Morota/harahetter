@@ -46,54 +46,53 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="col-6">
-			<div class="col-6">
-				<div class="comment-form">
-					<h2 class="comment">コメント</h2>
-					<!--引数の順番は親から子へ-->
-					<%= form_for ([@recipe,@comment]) do |f| %>
+			<div class="comment-form">
+				<h2 class="recipes-show-comments-title">コメント</h2>
+				<!--引数の順番は親から子へ-->
+				<%= form_for ([@recipe,@comment]) do |f| %>
 
-					<div class="form-group">
-						<%= f.text_area :content, class: "form-control", placeholder: "コメントしてみよう" %>
-					</div>
-
-					<div class="comment-button" style="margin-bottom: 35px">
-						<%= f.submit "コメントする", class: "btn btn-info btn-block" %>
-					</div>
-					<%end%>
+				<div class="form-group">
+					<%= f.text_area :content, class: "form-control", placeholder: "コメントしてみよう" %>
 				</div>
 
-				<h2 class="comment-index">コメント一覧</h2>
+				<div class="comment-button">
+					<%= f.submit "コメントする", class: "btn btn-success btn-block" %>
+				</div>
+				<%end%>
+			</div>
 
-				<% @comments.each do |comment| %>
+			<h2 class="recipes-show-comments-catalog">コメント一覧</h2>
 
-				<div class="card">
-					<h5 class="card-header">
-						<div class="comment-user-profile-image" style="border-radius: 50%;">
-							<%= attachment_image_tag comment.user, :profile_image, :fill, 50, 50, fallback: "no-image.png", size: "50x50", class:"img-fluid" %>
-							<%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %>
-							<time datetime="<%= comment.created_at %>" style="font-size: 13px;  margin-left: 222px">
-								<%= time_ago_in_words(comment.created_at) %>前
-							</time>
-						</div>
-					</h5>
+			<% @comments.each do |comment| %>
 
-					<div class="card-body">
-						<div class="card-text">
-							<%= simple_format comment.content %>
+			<div class="card">
+				<h5 class="card-header">
+					<div class="comment-user-profile-image">
+						<%= attachment_image_tag comment.user, :profile_image, :fill, 50, 50, fallback: "no-image.png", size: "50x50", class:"img-fluid" %>
+						<%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %>
+						<time datetime="<%= comment.created_at %>" style="font-size: 13px;  margin-left: 222px">
+							<%= time_ago_in_words(comment.created_at) %>前
+						</time>
+					</div>
+				</h5>
 
-							<% if comment.user == current_user %>
-							<div class="card-button" style="text-align: right;">
-								<%= link_to recipe_comment_path(comment), method: :delete, data: {confirm:"本当に削除しますか？"} do %>
-								<span class="fa fa-trash trash-btn"></span>
-								<% end %>
-							</div>
+				<div class="card-body">
+					<div class="card-text">
+						<%= simple_format comment.content %>
+
+						<% if comment.user == current_user %>
+						<div class="card-button" style="text-align: right;">
+							<%= link_to recipe_comment_path(comment), method: :delete, data: {confirm:"本当に削除しますか？"} do %>
+							<span class="fa fa-trash trash-btn"></span>
 							<% end %>
 						</div>
+						<% end %>
 					</div>
 				</div>
-				<% end %>
 			</div>
+			<% end %>
 		</div>
 	</div>
 </div>

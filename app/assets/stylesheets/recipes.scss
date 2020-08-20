@@ -125,6 +125,11 @@
         font-weight: bold;
         text-align: center;
     }
+
+    textarea#comment_content.form-control {
+        border: solid 3px #00214d;
+        margin-bottom: 30px;
+    }
 }
 
 
